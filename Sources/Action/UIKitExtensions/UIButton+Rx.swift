@@ -26,7 +26,7 @@ public extension Reactive where Base: UIButton {
             if let action = newValue {
                 action
                     .enabled
-                    .bindTo(self.isEnabled)
+                    .bind(to: self.isEnabled)
                     .addDisposableTo(self.base.actionDisposeBag)
                 
                 // Technically, this file is only included on tv/iOS platforms,
